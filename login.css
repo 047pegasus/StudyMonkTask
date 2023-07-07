@@ -1,0 +1,82 @@
+body{
+    background-color: #303030;
+    font-family: 'Montserrat';
+    color: white;
+}
+
+.card{
+    width: 25em;
+    height: 30em;
+    margin: 0 auto;
+    margin-top: 100px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+    background-color: #212121;
+}
+
+.title{
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.emailtext{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: 1em;
+    font-size: 1.2em;
+    font-weight:500;
+    color: #00F2B8;
+}
+
+.passtext{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 1em;
+    font-size: 1.2em;
+    font-weight:500;
+    color: #00F2B8;
+}
+
+.input-field{
+  background-color: #5e5e5e00;
+  border: 0;
+  margin-left: 2.5em;
+  color:white;
+  height: 2.5em;
+  width: 25em;
+  margin-top:0.5em;
+  border-bottom: 1px solid grey;
+}
+
+.input-field:hover{
+  border-bottom: 1px solid #00F2B8;
+  transition: linear 0.5s;
+}
+
+.btn{
+  height: 2.5em;
+  width: 10em;
+  border: 1px solid #00F2B8;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  margin-left:30%;
+  margin-top: 2em;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.register{
+  text-decoration: none;
+  color: white;
+  margin-left: 18%;
+  margin-top: 2em;
+}
+
+.register a{
+  text-decoration: none;
+  color: #00F2B8;
+}
