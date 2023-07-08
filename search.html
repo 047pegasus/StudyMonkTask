@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Student Search</title>
+  <title>Candidate Search | Recruitmint</title>
   <link rel="stylesheet" href="./search.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 </head>
 <body>
-  
   <script src="./preloader.js"></script>
 
   <div id="preloader" class="preloader">
@@ -25,7 +25,7 @@
         <li><a href="./search.html">Search</a></li>
       </ul>
       <div class="login">
-        <a href="./login.html">Login/SignUp</a>
+        <a id="login-button" href="./login.html">Login/SignUp</a>
       </div>
     </nav>
   </div>
@@ -47,6 +47,8 @@
     <div id="search-results" class="search-results"></div>
   </div>
 
+  <button id="export-button">Export Selected Candidates</button>
+
   <footer>
     © 2023-2024 RecruitMint | All Rights Reserved
   </footer>
@@ -56,5 +58,6 @@
   <script>
     AOS.init();
   </script>
+  <script src="https://unpkg.com/xlsx/dist/xlsx.full.min.js"></script> 
 </body>
 </html>

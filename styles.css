@@ -1,5 +1,5 @@
 /* CSS for site preloader */
-.preloader {
+.preloader{
   position: fixed;
   top: 0;
   left: 0;
@@ -79,6 +79,8 @@
 
 html{
   scroll-behavior: smooth;
+  padding:0;
+  margin:0 auto;
 }
 
 html::-webkit-scrollbar {
@@ -86,13 +88,15 @@ html::-webkit-scrollbar {
 }
 
 body{
-background-color:#212121;
+background:url(./assets/img/office-background.jpg) no-repeat center center fixed;
 font-family: 'Montserrat';
 scroll-behavior: smooth;
+padding:0;
+margin:0 auto;
 }
 
 .start_land{
-  width: 100%;
+  width: 100vw;
   height: 100vh;
 }
 
@@ -101,9 +105,9 @@ scroll-behavior: smooth;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #212121;
-    margin-left: 2em;
-    margin-top: 1em;
+    background-color: #212121a1;
+    max-height:5em;
+    height: 5em;
   }
   
   /* Style the logo image */
@@ -183,9 +187,8 @@ scroll-behavior: smooth;
   }
 
   .main_right{
-    width: 50%;
-    padding: 6em 3em;
-    align-items: start;
+    width: 100%;
+    padding: 6em 10em;
   }
 
   .title{
@@ -218,7 +221,9 @@ scroll-behavior: smooth;
     font-size: 1em;
     font-weight: 100;
     text-align: left;
-    margin-top: 1em;
+    margin: 0 auto;
+    margin-left: 45%;
+    margin-top: 10em;
     line-height: 2em;
   }
 
@@ -255,8 +260,9 @@ scroll-behavior: smooth;
   }
 
   .mouse{
-    margin-top: 2.5em;
-    margin-left:0%;
+    margin: 0 auto;
+    margin-top: 2em;
+    margin-left:50%;
     padding: 0.7em;
     border-radius: 50%;
     border: 2px solid #00F2B8;
@@ -446,7 +452,6 @@ scroll-behavior: smooth;
 .lastpage{
   width: 100%;
   height: 100vh;
-  background-color: #212121;
   display: flex;
   justify-content: space-around;
   align-items: center;

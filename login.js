@@ -34,7 +34,8 @@ function fetchUserData() {
   
       writeUserData(users);
   
-      alert('Registration successful! You are now signed up and logged in!');
+      alert('Registration successful! You are now Signed Up!');
+      alert('Login successful!');
       //To set flag in local storage
       flag =true;
       localStorage.setItem('flag', JSON.stringify(flag));

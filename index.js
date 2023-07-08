@@ -48,4 +48,3 @@ function logoutCheckEvent(event) {
 
 const logcheck = document.getElementById('login-button');
 logcheck.addEventListener('click', logoutCheckEvent);
-
