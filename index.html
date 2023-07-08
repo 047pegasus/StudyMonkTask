@@ -5,18 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./styles.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>RecruitMent</title>
 </head>
 <body>
-    <div class="start_land">
-    <nav class="navbar">
+  <script src="./preloader.js"></script>
+  <script src="./index.js"></script>
+
+  <div id="preloader" class="preloader">
+    <div class="loader"></div>
+</div>
+
+    <div data-aos="fade-up" data-aos-delay="3000" class="start_land">
+    <nav data-aos-delay="2800" data-aos="fade-in" class="navbar">
         <div class="logo">
-          <a href="#"><img src="./assets/img/RecruitMint.png" alt="Logo"></a>
+          <a href="./index.html"><img src="./assets/img/RecruitMint.png" alt="Logo"></a>
         </div>
         <ul class="nav-links">
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact Us</a></li>
-          <li><a href="#">Search</a></li>
+          <li><a href="#second_landing">About</a></li>
+          <li><a href="#lastpage">Contact Us</a></li>
+          <li><a href="./search.html">Search</a></li>
         </ul>
         <div class="login">
           <a href="./login.html">Login/SignUp</a>
@@ -24,7 +32,7 @@
       </nav>
       
      <div class="main">
-      <img class= "main_img" src="./assets/img/Coworking office space.png" alt="RecruitMent" />
+      <img class="main_img" data-aos-delay="3000" data-aos="fade-right" data-aos-duration="1500" src="./assets/img/Coworking office space.png" alt="RecruitMent" />
 
       <div class="main_right">
         <p class="title">Find the Correct <br>Candidate</p>
@@ -34,54 +42,54 @@
           <a href="./login.html">Get Started</a>
         </div>
         <p class="subtitle3">Wanna explore more? <br> Scroll Down to know more...</p>
-        <img class="mouse" src="./assets/img/Mouse.png" alt="mouse" />
+        <img class="mouse" src="./assets/img/Mouse.png" alt="mouse">
       </div>
     </div>
     </div>
 
-    <div class="second_landing">
+    <div data-aos="fade-up" id="second_landing" class="second_landing">
       <div class="top">
       <div class="second_left">
         <h2 class="title_second">A Network like None Other.</h2>
         <h3 class="subtitle4">Candidates connected all over the world.</h3>
         <h4 class="subtitle5">Wanna try it out?</h4>
         <p class="subtitle6">Head over to the Search page to find relevant candidates.</p>
-        <p class="subtitle7"><a class="search_text" href="#search">Click Here</a> to search.</p>
+        <p class="subtitle7"><a class="search_text" href="./search.html">Click Here</a> to search.</p>
       </div>
-        <img class="second_img" src="./assets/img/Colleagues discussing work in zoom meeting.png" alt="Network" />
+        <img class="second_img" data-aos="fade-left" src="./assets/img/Colleagues discussing work in zoom meeting.png" alt="Network" />
       </div>
-        <div class="partnerframe">
+        <div data-aos="zoom-out" class="partnerframe">
           <h4 class="partner_head">Our Partners Companies</h4>
           <ul class="partner_list">
-            <li><img src="./assets/img/Amazon.png" alt=""></li>
-            <li><img src="./assets/img/IBM.png" alt=""></li>
-            <li><img src="./assets/img/Google.png" alt=""></li>
-            <li><img src="./assets/img/Meta.png" alt=""></li>
-            <li><img src="./assets/img/Adobe.png" alt=""></li>
-            <li><img src="./assets/img/Atlassian.png" alt=""></li>
-            <li><img src="./assets/img/Apple Logo.png" alt=""></li>
-            <li><img src="./assets/img/Red Hat.png" alt=""></li>
-            <li><img src="./assets/img/Microsoft.png" alt=""></li>
+            <li><img src="./assets/img/Amazon.png" alt="Amazon"></li>
+            <li><img src="./assets/img/IBM.png" alt="IBM"></li>
+            <li><img src="./assets/img/Google.png" alt="Google"></li>
+            <li><img src="./assets/img/Meta.png" alt="Meta"></li>
+            <li><img src="./assets/img/Adobe.png" alt="Adobe"></li>
+            <li><img src="./assets/img/Atlassian.png" alt="Atlassian"></li>
+            <li><img src="./assets/img/Apple Logo.png" alt="Apple"></li>
+            <li><img src="./assets/img/Red Hat.png" alt="Red Hat"></li>
+            <li><img src="./assets/img/Microsoft.png" alt="Microsoft"></li>
           </ul>
         </div>
     </div>
 
-    <div class="third_landing">
+    <div data-aos="fade-up" class="third_landing">
       <h2 class="titlethird">Testimonials</h2>
       <h4 class="subtitlethird">Don’t trust us. See what others have to say about RecruitMint</h4>
       <div class="testimonials">
         <div class="testimonial">
-          <img src="./assets/img/Male User.png" alt="">
+          <img src="./assets/img/Male User.png" alt="Avatar">
           <p class="testimonial_name">John Kennedy F.</p>
           <p class="testimonial_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
         </div>
         <div class="testimonial">
-          <img src="./assets/img/Male User.png" alt="">
+          <img src="./assets/img/Male User.png" alt="Avatar">
           <p class="testimonial_name">Suman Kalra Mehta</p>
           <p class="testimonial_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
         </div>
         <div class="testimonial">
-          <img src="./assets/img/Male User.png" alt="">
+          <img src="./assets/img/Male User.png" alt="Avatar">
           <p class="testimonial_name">Katie Hadlock</p>
           <p class="testimonial_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
         </div>
@@ -90,14 +98,14 @@
       <p class="thirdp2">Connect with us personally via email. Fill the form below to get started. </p>
     </div>
 
-    <div class="lastpage">
+    <div data-aos="zoom-out" data-aos-delay="50" class="lastpage">
       <div class="last_left">
         <img src="./assets/img/No connection.png" alt="Network Form">
-        <p class="last_text">Our team will connect soon.</p>
-        <p class="last_text2">Till then you can search our candidates.</p>
+        <p class="last_text">Our team will connect with you soon.</p>
+        <p class="last_text2">Till then you can search our registered candidates.</p>
       </div>
       <div class="last_right">
-      <p class="last_title">Connect with us</p>
+      <p class="last_title">Connect with Us</p>
       <form>
         <p>First Name*</p><input type="text" placeholder="First Name*">
         <p>Last Name</p><input type="text" placeholder="Last Name">
@@ -110,5 +118,9 @@
     <footer>
       © 2023-2024 RecruitMint | All Rights Reserved
     </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 </body>
 </html>
