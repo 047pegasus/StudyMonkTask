@@ -1,4 +1,5 @@
 var flag = false;
+var userName="";
 // Function to fetch user data from local storage
 function fetchUserData() {
     const usersData = JSON.parse(localStorage.getItem('users')) || { users: [] };
@@ -23,26 +24,35 @@ function fetchUserData() {
     const username = document.getElementById('logemail').value;
     const password = document.getElementById('logpass').value;
   
-    if (!(await userExists(username))) {
+    const users = fetchUserData();
+    const existingUser = users.find(user => user.username === username);
+  
+    if (existingUser) {
+      if (existingUser.password === password) {
+        alert('Login successful!');
+        flag = true;
+        //Extract username from email
+        var index = username.indexOf('@');
+        var usernameval = username.substring(0,index);
+        userName=usernameval;
+        localStorage.setItem('flag', JSON.stringify(flag));
+        localStorage.setItem('userName', JSON.stringify(userName));
+        window.location.href = 'index.html';
+      } else {
+        alert('Incorrect password. Please try again.');
+      }
+    } else {
       const newUser = {
         username: username,
         password: password
       };
   
-      const users = fetchUserData();
       users.push(newUser);
-  
       writeUserData(users);
   
       alert('Registration successful! You are now Signed Up!');
       alert('Login successful!');
-      //To set flag in local storage
-      flag =true;
-      localStorage.setItem('flag', JSON.stringify(flag));
-      window.location.href = 'index.html';
-    } else {
-      alert('User already exists. Login successful!');
-      flag =true;
+      flag = true;
       localStorage.setItem('flag', JSON.stringify(flag));
       window.location.href = 'index.html';
     }
@@ -54,3 +64,17 @@ function fetchUserData() {
 
   //To set flag in local storage
   //localStorage.setItem('flag', JSON.stringify(flag));
+
+  window.addEventListener('DOMContentLoaded', () => {
+    const loginButton = document.getElementById('login-button');
+    const searchMenuButton = document.getElementById('search-menu-button');
+  
+    if (flag) {
+      loginButton.innerHTML = 'Logout';
+      searchMenuButton.style.display = 'visible';  
+    }
+     else {
+      loginButton.innerHTML = 'Login/SignUp';
+      searchMenuButton.style.display = 'none';
+    }
+  });
