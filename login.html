@@ -5,12 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="./login.css" rel="stylesheet">
-    <title>Login Page</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script type="module" src="./login.js"></script>
+    <title>Login | Recruitment</title>
 </head>
 <body>
-   <div class="card">
+  <script type="module" src="./preloader.js"></script>
+
+  <div id="preloader" class="preloader">
+    <div class="loader"></div>
+</div>
+
+
+  <nav data-aos-delay="2800" data-aos="fade-in" class="navbar">
+    <div class="logo">
+      <a href="./index.html"><img data-aos-delay="2800" data-aos="fade-in" src="./assets/img/RecruitMint.png" alt="Logo"></a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="./index.html">About</a></li>
+      <li><a href="./index.html">Contact Us</a></li>
+      <li><a href="./search.html">Search</a></li>
+    </ul>
+    <div class="login">
+      <a href="./login.html">Login/SignUp</a>
+    </div>
+  </nav>
+
+   <div data-aos-delay="2800" data-aos="zoom-out" class="card">
       <h4 class="title">Log In!</h4>
-      <form>
+      <form id="login-form">
         <div class="field">
           <p class="emailtext">Email</p>
           <input autocomplete="off" id="logemail" placeholder="Email" class="input-field" name="logemail" type="email">
@@ -20,8 +43,16 @@
           <input autocomplete="off" id="logpass" placeholder="Password" class="input-field" name="logpass" type="password">
         </div>
         <button class="btn" type="submit">Login</button>
-         <p class="register">Don't have an account? <a href="#">SignUp</a></p>
+         <p class="register">Don't have an account? <a href="#">SignUp Here Only</a></p>
       </form>
     </div>
+
+    <footer>
+      © 2023-2024 RecruitMint | All Rights Reserved
+    </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 </body>
 </html>

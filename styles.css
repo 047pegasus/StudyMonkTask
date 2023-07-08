@@ -255,8 +255,8 @@ scroll-behavior: smooth;
   }
 
   .mouse{
-    margin-top: 2em;
-    margin-left:30%;
+    margin-top: 2.5em;
+    margin-left:0%;
     padding: 0.7em;
     border-radius: 50%;
     border: 2px solid #00F2B8;
@@ -411,7 +411,20 @@ scroll-behavior: smooth;
   }
 
   .testimonial img{
-    margin: 1em 9em;
+    margin: 0.4em 7em;
+    border-radius:50%;
+    width:10em;
+    height:10em;
+
+  }
+
+  .testimonial_text{
+    font-size: 1.2em;
+    font-weight: 100;
+    color: white;
+    margin-top: 1em;
+    width:80%;
+    margin:0 auto;
   }
 
   .thirdp1{

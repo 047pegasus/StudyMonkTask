@@ -9,8 +9,8 @@
     <title>RecruitMent</title>
 </head>
 <body>
-  <script src="./preloader.js"></script>
-  <script src="./index.js"></script>
+  <script type="module" src="./preloader.js"></script>
+  <script type="module" src="./index.js"></script>
 
   <div id="preloader" class="preloader">
     <div class="loader"></div>
@@ -27,7 +27,7 @@
           <li><a href="./search.html">Search</a></li>
         </ul>
         <div class="login">
-          <a href="./login.html">Login/SignUp</a>
+          <a id="login-button" href="./login.html">Login/SignUp</a>
         </div>
       </nav>
       
@@ -42,7 +42,7 @@
           <a href="./login.html">Get Started</a>
         </div>
         <p class="subtitle3">Wanna explore more? <br> Scroll Down to know more...</p>
-        <img class="mouse" src="./assets/img/Mouse.png" alt="mouse">
+        <a href="#second_landing"><img class="mouse" src="./assets/img/Mouse.png" alt="mouse"></a>
       </div>
     </div>
     </div>
@@ -79,26 +79,26 @@
       <h4 class="subtitlethird">Don’t trust us. See what others have to say about RecruitMint</h4>
       <div class="testimonials">
         <div class="testimonial">
-          <img src="./assets/img/Male User.png" alt="Avatar">
+          <img src="./assets/img/John.jpeg" alt="Avatar">
           <p class="testimonial_name">John Kennedy F.</p>
-          <p class="testimonial_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+          <p class="testimonial_text">"Thank you for providing such a seamless hiring experience through RecruitMint! The user-friendly interface has made the recruitment process much more efficient. Keep up the great work!" <br> -John Kennedy F.</p>
         </div>
         <div class="testimonial">
-          <img src="./assets/img/Male User.png" alt="Avatar">
+          <img src="./assets/img/Suman.jpeg" alt="Avatar">
           <p class="testimonial_name">Suman Kalra Mehta</p>
-          <p class="testimonial_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+          <p class="testimonial_text">"As an HR manager at an MNC, I have been using RecruitMint for a while now, and I must say it has revolutionized our hiring process. Highly recommended!"<br> -Suman Kalra Mehta</p>
         </div>
         <div class="testimonial">
-          <img src="./assets/img/Male User.png" alt="Avatar">
+          <img src="./assets/img/Katie.jpeg" alt="Avatar">
           <p class="testimonial_name">Katie Hadlock</p>
-          <p class="testimonial_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+          <p class="testimonial_text">"RecruitMint has been a game-changer for our MNC company's recruitment efforts. Kudos to the RecruitMint team for creating such a valuable tool!"<br> <bold>-Katie Hadlock</bold></p>
         </div>
       </div>
       <p class="thirdp1">Still not satisfied? Worry not</p>
       <p class="thirdp2">Connect with us personally via email. Fill the form below to get started. </p>
     </div>
 
-    <div data-aos="zoom-out" data-aos-delay="50" class="lastpage">
+    <div data-aos="zoom-out" data-aos-delay="50" id="lastpage" class="lastpage">
       <div class="last_left">
         <img src="./assets/img/No connection.png" alt="Network Form">
         <p class="last_text">Our team will connect with you soon.</p>
@@ -109,7 +109,7 @@
       <form>
         <p>First Name*</p><input type="text" placeholder="First Name*">
         <p>Last Name</p><input type="text" placeholder="Last Name">
-        <p>Mobile No. Name*</p><input type="number" placeholder="Mobile No.">
+        <p>Mobile No.*</p><input type="number" placeholder="Mobile No.">
         <p>Email*</p><input type="email" placeholder="Email*">
         <input class="submit_button" type="submit" value="Submit">
       </form>

@@ -21,7 +21,6 @@ function displaySearchResults(results) {
     results.forEach(student => {
       const studentCard = document.createElement('div');
       studentCard.classList.add('student-card');
-      document.getElementById("container").style.width="fit-content";
 
       const name = document.createElement('h3');
       name.innerText = student.name;
@@ -38,11 +37,19 @@ function displaySearchResults(results) {
       const secondaryLanguage = document.createElement('p');
       secondaryLanguage.innerText = `Secondary Language: ${student.secondaryLanguage}`;
 
+      const preferredJobRole = document.createElement('p');
+      preferredJobRole.innerText = `Preferred Job Role: ${student.preferredJobRole}`;
+
+      const location = document.createElement('p');
+      location.innerText = `Location: ${student.location}`;
+
       studentCard.appendChild(name);
       studentCard.appendChild(enrollmentId);
       studentCard.appendChild(comfortableLanguage);
       studentCard.appendChild(collegeName);
       studentCard.appendChild(secondaryLanguage);
+      studentCard.appendChild(preferredJobRole);
+      studentCard.appendChild(location);
 
       searchResultsContainer.appendChild(studentCard);
     });
@@ -52,26 +59,25 @@ function displaySearchResults(results) {
 // Search function
 async function searchStudents() {
   const preferredLanguageInput = document.getElementById('preferred-language');
-  const secondaryLanguageInput = document.getElementById('secondary-language');
+  const preferredJobRoleInput = document.getElementById('preferred-job-role');
+  const locationInput = document.getElementById('location');
 
   const preferredLanguage = preferredLanguageInput.value.trim().toLowerCase();
-  const secondaryLanguage = secondaryLanguageInput.value.trim().toLowerCase();
-
-  if (preferredLanguage == '' && secondaryLanguage == '') {
-    alert('Please enter a preferred or secondary language.');
-    return;
-  }
+  const preferredJobRole = preferredJobRoleInput.value.trim().toLowerCase();
+  const location = locationInput.value.trim().toLowerCase();
 
   const studentData = await fetchStudentData();
 
   const filteredStudents = studentData.filter(student => {
-    const studentPreferredLang = student.comfortableLanguage.toLowerCase();
-    const studentSecondaryLang = student.secondaryLanguage.toLowerCase();
+    const studentPreferredLanguage = student.comfortableLanguage.toLowerCase();
+    const studentPreferredJobRole = student.preferredJobRole.toLowerCase();
+    const studentLocation = student.location.toLowerCase();
 
-    // Check if either preferred or secondary language matches
+    // Check if any of the parameters match
     return (
-      studentPreferredLang.includes(preferredLanguage) &&
-      studentSecondaryLang.includes(secondaryLanguage)
+      (preferredLanguage === '' || studentPreferredLanguage.includes(preferredLanguage)) &&
+      (preferredJobRole === '' || studentPreferredJobRole.includes(preferredJobRole)) &&
+      (location === '' || studentLocation.includes(location))
     );
   });
 
@@ -80,9 +86,6 @@ async function searchStudents() {
 
 // Example usage:
 document.getElementById('search-button').addEventListener('click', searchStudents);
-
-// Add an event listener to the clear button
-document.getElementById('clear-button').addEventListener('click', clearResults);
 
 // Function to clear search results
 function clearResults() {
